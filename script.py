@@ -223,3 +223,61 @@ Method 1 is useful to loop through the list, but it's not possible to modify the
 Method 2 uses indexes to loop through the list, making it possible to also modify the list if needed. 
 """
 # / range (lists)
+#
+#
+#
+#
+# loops /
+
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+  num = random.randint(1, 6)
+  print num
+  if num == 5:
+    print "Sorry, you lose!"
+    break
+  count += 1
+else:
+  print "You win!"
+
+# strings in loobs:
+
+d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'}
+
+for key in d:
+  print key, " ", d[key]
+
+# zapirka znaci da prodolzi vo istiot red
+# vo slucajov se koristi kako konkatanacija
+
+
+
+
+# enumerate dava indeksi na lista
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+  print index+1, item
+
+
+
+# zip se koristi za vrtenje na 2 ili povekje listi
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+  # Add your code here!
+  if a >= b:
+    print a
+  else:
+    print b
+
+
+    
+# / loobs

@@ -25,6 +25,9 @@ Use functions to allow your game to have more features like rematches, statistic
 Some of these options will be easier after we cover loops in the next lesson. 
 Think about coming back to Battleship! after a few more lessons 
 and see what other changes you can make!
+
+Mozda turn -= 1 koga ke pogodi na pole sto vekje go kazal
+za da trae podolgo
 """
 
 from random import randint
