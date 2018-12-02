@@ -116,7 +116,7 @@ inventory['gold'] += 50
 #
 #
 #
-# / lists
+# lists /
 
 shopping_list = ["banana", "orange", "apple"]
 stock = { "banana": 6, "apple": 0, "orange": 32, "pear": 15 }
@@ -141,7 +141,7 @@ print stock
 #
 #
 #
-# / vezba so studenti
+# vezba so studenti /
 
 lloyd = {
   "name": "Lloyd",
@@ -199,3 +199,27 @@ print class_avg
 print get_letter_grade(class_avg)
 
 # / vezba so studenti
+#
+#
+#
+#
+# range (lists) /
+"""
+### Iterating over a list in a function ###
+
+Now that we've learned about range, we have two ways of iterating through a list.
+
+Method 1 - for item in list:
+
+for item in list:
+  print item
+
+Method 2 - iterate through indexes:
+
+for i in range(len(list)):
+  print list[i]
+
+Method 1 is useful to loop through the list, but it's not possible to modify the list this way.
+Method 2 uses indexes to loop through the list, making it possible to also modify the list if needed. 
+"""
+# / range (lists)
