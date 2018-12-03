@@ -278,6 +278,33 @@ for a, b in zip(list_a, list_b):
   else:
     print b
 
+# / loops
+#
+#
+#
+#
+# advanced topics /
 
-    
-# / loobs
+# list comprehension
+# pr: parni od 0 do 50
+
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print "Parni od 0 do 50:"
+print evens_to_50
+
+threes_and_fives = [x for x in range(1,16) if x % 3 == 0 or x % 5 == 0]
+
+
+# list slicing
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+message = garbled[::-2]
+print message
+
+
+# lambda (anonymous functions)
+
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+message = filter(lambda x: x != "X", garbled)
+print message
+
+# / advanced topics
