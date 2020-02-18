@@ -10,15 +10,15 @@ import multiprocessing
 import time
 
 # url
-url = 'https://handhelds.api.qa.lto.direct/ords/dl_a_letas/hhd/v1/getIRMVChecklist?limit=2000'
+url = ''
 
-username = '869092030733866'
-password = 'RGVTF000054869092030733866869092030733874'
+username = ''
+password = ''
 
 # test connection
 def test_connection(url, username, password): #, timeout = 10):
     try:
-        _ = requests.get(url, auth=(username, password)) #, timeout=timeout)
+        _ = requests.get(url, auth=(username, password), verify=False) #, timeout=timeout)
         print(time.perf_counter())
         return True
     except requests.exceptions.RequestException as e:
@@ -35,10 +35,10 @@ if __name__ == '__main__':
 
     t1 = time.perf_counter()
 
-    users = range(100)
+    users = range(200)
     processes = []
 
-""" this works ok 
+# this works ok """
     for user in users:
         p = multiprocessing.Process(target=test_connection, args=(url, username, password))
         p.start()
@@ -50,11 +50,13 @@ if __name__ == '__main__':
     t2 = time.perf_counter()
 
     print(f"total time: {t2-t1}")
-"""
 
+
+"""
 # map() function
 p = multiprocessing.Process(target=test_connection, args=(url, username, password))
 result = map(p, users)
 print(result)
 results = set(result)
 print(results)
+"""

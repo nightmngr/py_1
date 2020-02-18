@@ -22,7 +22,7 @@ def test_connection(url, timeout = 1):
     
 
 # url
-url = 'https://handhelds.api.qa.lto.direct1/ords/dl_a_letas/hhd/v1/getIRMVChecklist?limit=2000'
+url = ''
 
 
 ##test_connection(url)
@@ -36,7 +36,7 @@ class User(object):
         self.id = id
     
     def run_request(self, url):
-        test_response = requests.get(url, auth=('869092030733866', 'RGVTF000054869092030733866869092030733874'))    
+        test_response = requests.get(url, auth=('', ''))    
 
         if(test_response.ok):
             print()
@@ -61,7 +61,7 @@ for x in range(10):
     # if host is reachable make the call
 
     if(test_connection(url)):
-        test_response = requests.get(url, auth=('869092030733866', 'RGVTF000054869092030733866869092030733874'))
+        test_response = requests.get(url, auth=('', ''))
 
         print()
         print()
