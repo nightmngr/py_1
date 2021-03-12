@@ -1,5 +1,9 @@
 # py 3.8.1
 # http_error_test
+# vo terminal:
+# sudo apt update
+# sudo apt install python3-pip
+# vo Py3: pip3 install requests
 
 # requests
 import requests
